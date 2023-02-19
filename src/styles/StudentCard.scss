@@ -1,0 +1,35 @@
+@import 'vars';
+
+.student-detail--card {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 205px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #282623;
+    border-radius: 5px;
+
+}
+.icon-card {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/contacto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.student--card-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--white);
+}
+.student--card-body {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}

@@ -1,0 +1,39 @@
+@import 'vars';
+
+.main-container{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main--list-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 0;
+    background-color: var(--warn-black);
+}
+
+.list-detail--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.list-detail--title h2 {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--white);
+}
+.list-detail--title p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
