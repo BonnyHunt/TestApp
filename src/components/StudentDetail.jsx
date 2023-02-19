@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/StudentDetail.scss'
+import { color } from "../utils/utils";
 
 const StudentDetail = ({ 
     state, 
@@ -8,22 +9,7 @@ const StudentDetail = ({
  }) => {
 
     const isActive = student.active? 'active' : 'false';
-
-    /* const validador = estudiantes.find(item => item.id === id); */
-    const color = (grades) => {
-        let color;
-        if (grades >= 4) {
-            color = "#00ff00";
-        }
-        if (grades >= 3 && grades < 4) {
-            color = "#ffff00";
-        }
-        if (grades < 3) {
-            color = "#ff0000"
-        }
-        return color
-    };
-
+    const studentColor = color(student.grades);
     const OnCancel = () => {
         setState(!state)
     };
@@ -33,10 +19,10 @@ const StudentDetail = ({
                 <div className="modal-background">
                     <div className="modal-container">
                         <div className="modal-container">
-                            <h2>{student?.Name}</h2>
+                            <h2 style={{color: student.Color }} >{student?.Name}</h2>
                             <p>{student?.ID}</p>
                             <p>Estado: {isActive}</p>
-                            <p style={{color: color(student.grades) }}>Grades: {student?.grades}</p>
+                            <p style={{color: studentColor }}>Grades: {student?.grades}</p>
                             <button className="cancel-btn" onClick={OnCancel}>Cancel</button>
                         </div>
                     </div>

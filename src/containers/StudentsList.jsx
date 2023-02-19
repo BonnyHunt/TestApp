@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Average, Promedio } from "../components/Promedio";
 import { StudentCard } from "../components/StudentCard";
 import { StudentDetail } from "../components/StudentDetail";
 import { useGetStudents } from "../Hooks/useGetStudents";
@@ -10,7 +11,7 @@ const API = 'http://localhost:3005/api/v1/students';
 
 const StudentsList = () => {
 
-    const { data, isLoading, error } = useGetStudents(API);
+    const { data, error } = useGetStudents(API);
 
     if(error) {
         console.log(error)
@@ -39,6 +40,7 @@ const StudentsList = () => {
 
                 {/* Student card container */}
                 <section className="list-cards--container">
+                    <Average students={filter} />
                     {
                         filter.map((student) => {
                            return <StudentCard 
